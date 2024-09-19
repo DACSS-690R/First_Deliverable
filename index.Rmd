@@ -1,0 +1,37 @@
+---
+title: "M Carlin: First Deliverable"
+output: html_notebook
+---
+
+
+```{r}
+getwd()
+```
+# First dataset
+```{r}
+folder="dataFiles"
+fileName="Social_Media_and_Mental_Health.csv"
+fileToRead=file.path(folder,fileName)
+fileToRead
+SMMH_data=read.csv(fileToRead)
+View(SMMH_data)
+```
+# Second dataset
+```{r}
+library(readxl)
+folder="dataFiles"
+fileName="UMassChan_ClerkshipGrades.xlsx"
+fileToRead=file.path(folder,fileName)
+fileToRead
+ClerkshipGrades_data=read_xlsx(fileToRead)
+View(ClerkshipGrades_data)
+```
+# Third dataset
+```{r}
+#install.packages("jsonlite")
+library(jsonlite)
+endPoint="https://data.lacity.org/resource/2nrs-mtv8.json"
+LA_Crime_data = fromJSON(endPoint)
+View(LA_Crime_data)
+```
+
