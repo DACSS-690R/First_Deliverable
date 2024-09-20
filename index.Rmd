@@ -16,6 +16,7 @@ fileToRead
 SMMH_data=read.csv(fileToRead)
 View(SMMH_data)
 ```
+
 # Second dataset
 ```{r}
 library(readxl)
@@ -26,12 +27,14 @@ fileToRead
 ClerkshipGrades_data=read_xlsx(fileToRead)
 View(ClerkshipGrades_data)
 ```
-# Third dataset
+
+# Third dataset - subset of crime data
 ```{r}
 #install.packages("jsonlite")
 library(jsonlite)
 endPoint="https://data.lacity.org/resource/2nrs-mtv8.json"
 LA_Crime_data = fromJSON(endPoint)
 View(LA_Crime_data)
+write.csv(LA_Crime_data, "../dataFiles/Crime_Data_subset.csv")
 ```
 
