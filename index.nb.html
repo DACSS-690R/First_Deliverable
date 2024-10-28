@@ -1754,11 +1754,12 @@ display: none;
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ2V0d2QoKVxuYGBgIn0= -->
-<pre class="r"><code>getwd()</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc2V0d2QoXCJDOi9Vc2Vycy9DYXJsaW5NTC9EQUNTUy02OTBSXCIpXG5nZXR3ZCgpXG5gYGAifQ== -->
+<pre class="r"><code>setwd(&quot;C:/Users/CarlinML/DACSS-690R&quot;)
+getwd()</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQzovVXNlcnMvQ2FybGluTUwvREFDU1MtNjkwUi9GaXJzdF9EZWxpdmVyYWJsZVwiXG4ifQ== -->
-<pre><code>[1] &quot;C:/Users/CarlinML/DACSS-690R/First_Deliverable&quot;</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiQzovVXNlcnMvQ2FybGluTUwvREFDU1MtNjkwUlwiXG4ifQ== -->
+<pre><code>[1] &quot;C:/Users/CarlinML/DACSS-690R&quot;</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1766,12 +1767,17 @@ display: none;
 <h1>First dataset</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9sZGVyPVwiZGF0YUZpbGVzXCJcbmZpbGVOYW1lPVwiU29jaWFsX01lZGlhX2FuZF9NZW50YWxfSGVhbHRoLmNzdlwiXG5maWxlVG9SZWFkPWZpbGUucGF0aChmb2xkZXIsZmlsZU5hbWUpXG5maWxlVG9SZWFkXG5TTU1IX2RhdGE9cmVhZC5jc3YoZmlsZVRvUmVhZClcblZpZXcoU01NSF9kYXRhKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZm9sZGVyPVwiZGF0YUZpbGVzXCJcbmZpbGVOYW1lPVwiU29jaWFsX01lZGlhX2FuZF9NZW50YWxfSGVhbHRoLmNzdlwiXG5maWxlVG9SZWFkPWZpbGUucGF0aChmb2xkZXIsZmlsZU5hbWUpXG5maWxlVG9SZWFkXG5gYGAifQ== -->
 <pre class="r"><code>folder=&quot;dataFiles&quot;
 fileName=&quot;Social_Media_and_Mental_Health.csv&quot;
 fileToRead=file.path(folder,fileName)
-fileToRead
-SMMH_data=read.csv(fileToRead)
+fileToRead</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGF0YUZpbGVzL1NvY2lhbF9NZWRpYV9hbmRfTWVudGFsX0hlYWx0aC5jc3ZcIlxuIn0= -->
+<pre><code>[1] &quot;dataFiles/Social_Media_and_Mental_Health.csv&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU01NSF9kYXRhPXJlYWQuY3N2KGZpbGVUb1JlYWQpXG5WaWV3KFNNTUhfZGF0YSlcbmBgYCJ9 -->
+<pre class="r"><code>SMMH_data=read.csv(fileToRead)
 View(SMMH_data)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -1781,14 +1787,24 @@ View(SMMH_data)</code></pre>
 <h1>Second dataset</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkeGwpXG5mb2xkZXI9XCJkYXRhRmlsZXNcIlxuZmlsZU5hbWU9XCJVTWFzc0NoYW5fQ2xlcmtzaGlwR3JhZGVzLnhsc3hcIlxuZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKVxuZmlsZVRvUmVhZFxuQ2xlcmtzaGlwR3JhZGVzX2RhdGE9cmVhZF94bHN4KGZpbGVUb1JlYWQpXG5WaWV3KENsZXJrc2hpcEdyYWRlc19kYXRhKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkeGwpXG5mb2xkZXI9XCJkYXRhRmlsZXNcIlxuZmlsZU5hbWU9XCJVTWFzc0NoYW5fQ2xlcmtzaGlwR3JhZGVzLnhsc3hcIlxuZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKVxuZmlsZVRvUmVhZFxuYGBgIn0= -->
 <pre class="r"><code>library(readxl)
 folder=&quot;dataFiles&quot;
 fileName=&quot;UMassChan_ClerkshipGrades.xlsx&quot;
 fileToRead=file.path(folder,fileName)
-fileToRead
-ClerkshipGrades_data=read_xlsx(fileToRead)
-View(ClerkshipGrades_data)</code></pre>
+fileToRead</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiZGF0YUZpbGVzL1VNYXNzQ2hhbl9DbGVya3NoaXBHcmFkZXMueGxzeFwiXG4ifQ== -->
+<pre><code>[1] &quot;dataFiles/UMassChan_ClerkshipGrades.xlsx&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQ2xlcmtzaGlwR3JhZGVzX2RhdGE9cmVhZF94bHN4KGZpbGVUb1JlYWQpXG5gYGAifQ== -->
+<pre class="r"><code>ClerkshipGrades_data=read_xlsx(fileToRead)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTmV3IG5hbWVzOlxuIn0= -->
+<pre><code>New names:</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuVmlldyhDbGVya3NoaXBHcmFkZXNfZGF0YSlcbmBgYCJ9 -->
+<pre class="r"><code>View(ClerkshipGrades_data)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1797,22 +1813,20 @@ View(ClerkshipGrades_data)</code></pre>
 <h1>Third dataset - subset of crime data</h1>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxud3JpdGUuY3N2KExBX0NyaW1lX2RhdGEsIFwiLi5kYXRhRmlsZXMvQ3JpbWVfRGF0YV9zdWJzZXQuY3N2XCIpXG5cbmBgYCJ9 -->
-<pre class="r"><code>write.csv(LA_Crime_data, &quot;..dataFiles/Crime_Data_subset.csv&quot;)
-</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuI2luc3RhbGwucGFja2FnZXMoXCJqc29ubGl0ZVwiKVxubGlicmFyeShqc29ubGl0ZSlcbmVuZFBvaW50PVwiaHR0cHM6Ly9kYXRhLmxhY2l0eS5vcmcvcmVzb3VyY2UvMm5ycy1tdHY4Lmpzb25cIlxuTEFfQ3JpbWVfZGF0YSA9IGZyb21KU09OKGVuZFBvaW50KVxuVmlldyhMQV9DcmltZV9kYXRhKVxud3JpdGUuY3N2KExBX0NyaW1lX2RhdGEsIFwiZGF0YUZpbGVzL0NyaW1lX0RhdGFfZnJvbV8yMDIwX3RvX1ByZXNlbnRfc3Vic2V0LmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>#install.packages(&quot;jsonlite&quot;)
+library(jsonlite)
+endPoint=&quot;https://data.lacity.org/resource/2nrs-mtv8.json&quot;
+LA_Crime_data = fromJSON(endPoint)
+View(LA_Crime_data)
+write.csv(LA_Crime_data, &quot;dataFiles/Crime_Data_from_2020_to_Present_subset.csv&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZyBpbiBmaWxlKGZpbGUsIGlmZWxzZShhcHBlbmQsIFwiYVwiLCBcIndcIikpIDpcbiAgY2Fubm90IG9wZW4gZmlsZSAnLi5kYXRhRmlsZXMvQ3JpbWVfRGF0YV9zdWJzZXQuY3N2JzogTm8gc3VjaCBmaWxlIG9yIGRpcmVjdG9yeVxuRXJyb3IgaW4gZmlsZShmaWxlLCBpZmVsc2UoYXBwZW5kLCBcImFcIiwgXCJ3XCIpKSA6IFxuICBjYW5ub3Qgb3BlbiB0aGUgY29ubmVjdGlvblxuIn0= -->
-<pre><code>Warning in file(file, ifelse(append, &quot;a&quot;, &quot;w&quot;)) :
-  cannot open file &#39;..dataFiles/Crime_Data_subset.csv&#39;: No such file or directory
-Error in file(file, ifelse(append, &quot;a&quot;, &quot;w&quot;)) : 
-  cannot open the connection</code></pre>
-<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIk0gQ2FybGluOiBGaXJzdCBEZWxpdmVyYWJsZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg0KYGBge3J9DQpnZXR3ZCgpDQpgYGANCiMgRmlyc3QgZGF0YXNldA0KYGBge3J9DQpmb2xkZXI9ImRhdGFGaWxlcyINCmZpbGVOYW1lPSJTb2NpYWxfTWVkaWFfYW5kX01lbnRhbF9IZWFsdGguY3N2Ig0KZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKQ0KZmlsZVRvUmVhZA0KU01NSF9kYXRhPXJlYWQuY3N2KGZpbGVUb1JlYWQpDQpWaWV3KFNNTUhfZGF0YSkNCmBgYA0KDQojIFNlY29uZCBkYXRhc2V0DQpgYGB7cn0NCmxpYnJhcnkocmVhZHhsKQ0KZm9sZGVyPSJkYXRhRmlsZXMiDQpmaWxlTmFtZT0iVU1hc3NDaGFuX0NsZXJrc2hpcEdyYWRlcy54bHN4Ig0KZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKQ0KZmlsZVRvUmVhZA0KQ2xlcmtzaGlwR3JhZGVzX2RhdGE9cmVhZF94bHN4KGZpbGVUb1JlYWQpDQpWaWV3KENsZXJrc2hpcEdyYWRlc19kYXRhKQ0KYGBgDQoNCiMgVGhpcmQgZGF0YXNldCAtIHN1YnNldCBvZiBjcmltZSBkYXRhDQpgYGB7cn0NCiNpbnN0YWxsLnBhY2thZ2VzKCJqc29ubGl0ZSIpDQpsaWJyYXJ5KGpzb25saXRlKQ0KZW5kUG9pbnQ9Imh0dHBzOi8vZGF0YS5sYWNpdHkub3JnL3Jlc291cmNlLzJucnMtbXR2OC5qc29uIg0KTEFfQ3JpbWVfZGF0YSA9IGZyb21KU09OKGVuZFBvaW50KQ0KVmlldyhMQV9DcmltZV9kYXRhKQ0Kd3JpdGUuY3N2KExBX0NyaW1lX2RhdGEsICIuLi9kYXRhRmlsZXMvQ3JpbWVfRGF0YV9zdWJzZXQuY3N2IikNCmBgYA0KDQo=</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIk0gQ2FybGluOiBGaXJzdCBEZWxpdmVyYWJsZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCg0KYGBge3J9DQpzZXR3ZCgiQzovVXNlcnMvQ2FybGluTUwvREFDU1MtNjkwUiIpDQpnZXR3ZCgpDQpgYGANCiMgRmlyc3QgZGF0YXNldA0KYGBge3J9DQpmb2xkZXI9ImRhdGFGaWxlcyINCmZpbGVOYW1lPSJTb2NpYWxfTWVkaWFfYW5kX01lbnRhbF9IZWFsdGguY3N2Ig0KZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKQ0KZmlsZVRvUmVhZA0KU01NSF9kYXRhPXJlYWQuY3N2KGZpbGVUb1JlYWQpDQpWaWV3KFNNTUhfZGF0YSkNCmBgYA0KDQojIFNlY29uZCBkYXRhc2V0DQpgYGB7cn0NCmxpYnJhcnkocmVhZHhsKQ0KZm9sZGVyPSJkYXRhRmlsZXMiDQpmaWxlTmFtZT0iVU1hc3NDaGFuX0NsZXJrc2hpcEdyYWRlcy54bHN4Ig0KZmlsZVRvUmVhZD1maWxlLnBhdGgoZm9sZGVyLGZpbGVOYW1lKQ0KZmlsZVRvUmVhZA0KQ2xlcmtzaGlwR3JhZGVzX2RhdGE9cmVhZF94bHN4KGZpbGVUb1JlYWQpDQpWaWV3KENsZXJrc2hpcEdyYWRlc19kYXRhKQ0KYGBgDQoNCiMgVGhpcmQgZGF0YXNldCAtIHN1YnNldCBvZiBjcmltZSBkYXRhDQpgYGB7cn0NCiNpbnN0YWxsLnBhY2thZ2VzKCJqc29ubGl0ZSIpDQpsaWJyYXJ5KGpzb25saXRlKQ0KZW5kUG9pbnQ9Imh0dHBzOi8vZGF0YS5sYWNpdHkub3JnL3Jlc291cmNlLzJucnMtbXR2OC5qc29uIg0KTEFfQ3JpbWVfZGF0YSA9IGZyb21KU09OKGVuZFBvaW50KQ0KVmlldyhMQV9DcmltZV9kYXRhKQ0Kd3JpdGUuY3N2KExBX0NyaW1lX2RhdGEsICJkYXRhRmlsZXMvQ3JpbWVfRGF0YV9mcm9tXzIwMjBfdG9fUHJlc2VudF9zdWJzZXQuY3N2IikNCmBgYA0KDQo=</div>
 
 
 

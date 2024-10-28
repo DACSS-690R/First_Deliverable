@@ -5,6 +5,7 @@ output: html_notebook
 
 
 ```{r}
+setwd("C:/Users/CarlinML/DACSS-690R")
 getwd()
 ```
 # First dataset
@@ -35,6 +36,6 @@ library(jsonlite)
 endPoint="https://data.lacity.org/resource/2nrs-mtv8.json"
 LA_Crime_data = fromJSON(endPoint)
 View(LA_Crime_data)
-write.csv(LA_Crime_data, "../dataFiles/Crime_Data_subset.csv")
+write.csv(LA_Crime_data, "dataFiles/Crime_Data_from_2020_to_Present_subset.csv")
 ```
 
