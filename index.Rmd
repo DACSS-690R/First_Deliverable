@@ -5,7 +5,7 @@ output: html_notebook
 
 
 ```{r}
-setwd("C:/Users/CarlinML/DACSS-690R")
+setwd("C:/Users/CarlinML/DACSS-690R/First_Deliverable")
 getwd()
 ```
 # First dataset
